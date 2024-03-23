@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: lightblue;
+}
+
+h2 {
+  margin: 1rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: repeat(3, 9rem);
+  grid-gap: 0.5rem;
+  margin-top: 3rem;
+  padding: 0.5rem;
+  background-color: rgb(41, 41, 41);
+}
+
+.kaart {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.voor,
+.achter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.achter {
+  backface-visibility: hidden;
+  background-color: black;
+  transform: scaleX(-1);
+}
+
+.toggleKaart {
+  transform: rotateY(180deg);
+}
